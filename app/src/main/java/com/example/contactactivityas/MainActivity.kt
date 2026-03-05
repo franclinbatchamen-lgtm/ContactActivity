@@ -1,6 +1,7 @@
 package com.example.contactactivityas
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,15 +13,15 @@ class MainActivity : AppCompatActivity() {
 
         var firstName = "Mikey"
         var lastName = "williams"
-        var Adress = "7FairmountRoad"
+        var Adress = "7 FairmountRoad"
         var isMale = true
         var dayOfBirth = 22
         var monthOfBirth = 5
         var yearOfBirth = 2000
 
-        println("${firstName} ${lastName}The place in which you reside${Adress}If i am not mistaken " +
-                "your gender is${true} and your born in the ${dayOfBirth} of the ${monthOfBirth}th in" +
-                " ${yearOfBirth}" )
+        println("${firstName} ${lastName} the place in which you reside ${Adress} If i am not mistaken " +
+                "your gender is ${if (isMale) "Male" else "Female"} and you were born on the ${dayOfBirth}nd of the ${monthOfBirth}th in" +
+                " ${yearOfBirth}." )
 
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
